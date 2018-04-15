@@ -1,0 +1,6 @@
+*.png   binary -delta
+*.jpg   binary -delta
+*.jpeg  binary -delta
+*.gif   binary -delta
+*.psd   binary -delta
+*.vox   binary -delta
