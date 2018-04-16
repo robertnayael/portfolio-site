@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site.
+// -----------------------------------------------------------------------------
+
+.header {
+
+    background-color: $header-bg;
+    position: fixed;
+    width: 100%;
+    height: $header-height;
+    transition: all 0.2s linear;
+    font-size: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+
+
+
+    @include screen-small {
+
+        //background-color: $header-bg;
+
+    }
+
+    @include screen-large {
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        //background-color: $header-bg;
+        //padding: 0.5em 1em;
+
+        &--at-top {
+            //background-color: $header-bg;
+            //padding: 0.5em 1em;
+        }
+    }
+
+
+}

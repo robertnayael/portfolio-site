@@ -1,0 +1,13 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  -webkit-font-smoothing: antialiased;
+  color: $text-color-light;
+  font: normal 100% / 1.8 $text-font-stack;
+  font-weight: 300;
+}
+
+strong {
+  font-weight: 700;
+}

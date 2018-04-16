@@ -1,0 +1,100 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the site layout.
+// -----------------------------------------------------------------------------
+
+$header-height: 60px;
+$section-top-padding: 200px;
+
+.page {
+    padding-top: $header-height;
+
+}
+
+.page__header {
+    height: $header-height;
+    margin-top: -$header-height;
+}
+
+.page__content {
+    background-color: $bg-dark;
+}
+
+.page__section {
+    background-color: $bg-dark;
+    box-sizing: border-box;
+    min-height: calc(100vh - #{$header-height});
+}
+
+// Make sure the anchor is: at the very top of its section
+// AND offset up to accommodate for the header.
+.page__anchor {
+    position: relative;
+    top: -$header-height;
+    display: block;
+
+    // position: absolute;
+    // top: 0;
+}
+
+.page__content-container {
+    max-width: $content-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding: 20px;
+
+    @include screen-large() {
+        padding-left: calc(310px + 180px); // make room for the avatar on the side
+    }
+}
+
+.page__content-container--avatar {
+    height: 0px;
+    padding: 0;
+    border: none;
+    position: relative;
+    z-index: 100;
+}
+
+.page__avatar {
+
+    position: fixed;
+
+    @include screen-large() {
+
+        height: calc(100vh - #{$header-height});
+        width: 310px;
+
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    @include screen-small() {
+        margin-top: - $header-height;
+    }
+
+}
+
+// canvas element
+#avatar {
+    
+    @include screen-large() {
+        max-height: calc(100vh - #{$header-height});
+    }
+
+    @include screen-small() {
+        padding-left: 20px;
+        height: $header-height;
+    }
+
+}
+
+.page__avatar::after {
+//     content: '.';
+//     color: rgba(0, 0, 0, 0);
+}
+
+.page__footer {
+
+}

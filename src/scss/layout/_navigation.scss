@@ -1,0 +1,85 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to site navigation.
+// -----------------------------------------------------------------------------
+
+.navigation {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+
+
+    @include screen-large {
+        max-width: $content-max-width;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__toggle {
+        display: none;
+
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border: none;
+        background-color: blue;
+        z-index: 100;
+        margin-right: 20px;
+
+        @include screen-small {
+            display: block;
+        }
+    }
+
+    &__menu {
+
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        @include screen-small {
+            opacity: 0;
+            pointer-events: none;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            padding-top: $header-height;
+            flex-direction: column;
+            justify-content: space-evenly;
+            transition: opacity 0.3s linear;
+            background-color: green;
+            border: 1px solid yellow;
+            
+            &.is-active {
+                pointer-events: auto;
+                opacity: 1;
+
+            }
+        }
+
+
+
+    }
+
+
+    &__link {
+
+        margin: 0 20px;
+
+        @include screen-small {
+            text-align: center;
+            display: block;
+        }
+    }
+
+
+
+}

@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the content sections.
+// -----------------------------------------------------------------------------
+
+.section {
+    display: flex;
+    align-items: center;
+    padding-bottom: $header-height; // helps to align contents vertically
+}
+
+.section__title {
+    font-weight: 700;
+    font-size: 250%;
+
+    &--main {
+        font-size: 300%;
+        text-align: center;
+    }
+}
+
+.section__subtitle {
+    font-weight: 300;
+    font-size: 140%;
+    text-align: center;
+}
+
+.section--intro {
+    background-color: $bg-dark;
+
+
+
+}
+
+.section--about {
+    background-color: $bg-light;
+}
+
+.section--projects {
+    background-color: $bg-light;
+}
