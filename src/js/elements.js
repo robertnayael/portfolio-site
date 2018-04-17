@@ -8,6 +8,6 @@ export const sections = {
     contactMe: document.querySelector('.section--contact-me'),
 };
 
-export const header = document.querySelector('.header');
+export const header = document.querySelector('.navigation');
 
 export const avatarCanvas = document.querySelector('#avatar');
