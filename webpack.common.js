@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-    context: path.resolve('./src'),
+    context: path.resolve('src'),
     entry: ['whatwg-fetch', 'babel-polyfill', './index.js'],
     output: {
         filename: 'main.js',
@@ -29,9 +29,10 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [
-                        { loader: 'css-loader', options: { minimize: true, importLoaders: 1 } },
-                        { loader: 'postcss-loader' },
-                        'sass-loader'
+                        { loader: 'css-loader', options: { minimize: true, importLoaders: 1, sourceMap: false } },
+                        { loader: 'postcss-loader', options: { sourceMap: true } },
+                        'resolve-url-loader',
+                        { loader: 'sass-loader', options: { sourceMap: true } }
                     ]
                 })
             },
@@ -52,6 +53,15 @@ module.exports = {
                 }
             },
             {
+                test: /\.(ttf|woff|eot)$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: 'fonts/[name].[ext]',
+                    }
+                }
+            },
+            {
                 test: /\.html$/,
                 use: [{
                     loader: 'html-loader',
@@ -66,7 +76,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin("styles.css"),
-        new CleanWebpackPlugin(['dist']),
+        //new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
             template: './index.html',
             favicon: './favicon.ico'
