@@ -1,9 +1,363 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
-        <title>Robert Gulewicz | front-end developer portfolio</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="#262626" />
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+        <title>Robert Gulewicz | front-end developer</title>
+        <!-- Piwik -->
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+            var u="//stats24.mydevil.net/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '19']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+        <noscript><p><img src="//stats24.mydevil.net/piwik.php?idsite=19" style="border:0;" alt="" /></p></noscript>
+        <!-- End Piwik Code -->
     </head>
-    <body>
+    <body class="page">
+
+        <!-- HEADER -->
+        <header class="page__header header">
+            <nav class="navigation" role="navigation">
+                <div class="navigation__toggle hide-text" aria-expanded="false" aria-controls="menu">Menu</div>
+                <ul class="navigation__menu" id="menu">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#about" id="link-about">
+                            <span class="navigation__link-text">About</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#skills" id="link-skills">
+                            <span class="navigation__link-text">Skills</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#projects" id="link-projects">
+                            <span class="navigation__link-text">Projects</span>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#link=contact-me" id="link-contact-me">
+                            <span class="navigation__link-text">Contact me</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- AVATAR -->
+        <div class="page__content-container page__content-container--avatar">
+                <div class="page__avatar avatar">
+                        <canvas id="avatar"></canvas>
+                </div>
+        </div>
+
+        <main class="page__content">
+            <a class="page__anchor" name="top" id="anchor-intro"></a>
+
+            <!-- SECTION: INTRO -->
+            <section class="page__section section section--intro" id="section-intro">
+                <div class="page__content-container section__inner-container">
+                    <h1 class="section__title section__title--main">Robert Gulewicz</h1>
+                    <p class="section__subtitle">JavaScript & front-end developer based in Tricity area, PL</p>
+                    <ul class="section-intro__buttons">
+                        <li class="section-intro__button">
+                            <a class="section-intro__button-link" href="https://github.com/robertnayael">
+
+                                <svg class="section-intro__icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="30 30 455 455" xml:space="preserve">
+                                <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9c1.4,0.3,2.6,0.4,3.8,0.4c8.3,0,11.5-6.1,11.5-11.4
+                                c0-5.5-0.2-19.9-0.3-39.1c-8.4,1.9-15.9,2.7-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5c-10.2-26.5-24.9-33.6-24.9-33.6
+                                c-19.5-13.7-0.1-14.1,1.4-14.1c0.1,0,0.1,0,0.1,0c22.5,2,34.3,23.8,34.3,23.8c11.2,19.6,26.2,25.1,39.6,25.1c10.5,0,20-3.4,25.6-6
+                                c2-14.8,7.8-24.9,14.2-30.7c-49.7-5.8-102-25.5-102-113.5c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,1.6-0.5,5-0.5
+                                c8.1,0,26.4,3.1,56.6,24.1c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7c30.2-21,48.5-24.1,56.6-24.1c3.4,0,5,0.5,5,0.5
+                                c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3c8,7.1,15.2,21.1,15.2,42.5
+                                c0,30.7-0.3,55.5-0.3,63c0,5.4,3.1,11.5,11.4,11.5c1.2,0,2.6-0.1,4-0.4C415.9,449.2,480,363.1,480,261.7C480,134.9,379.7,32,256,32z"/>
+                               </svg>
+
+                            </a></li>
+                        <li class="section-intro__button">
+                            <a class="section-intro__button-link" href="https://www.linkedin.com/in/robert-gulewicz">
+
+                                <svg class="section-intro__icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="65 65 385 385" xml:space="preserve">
+                                    <g>
+                                        <g>
+                                            <path class="st0" d="M182.8,384V212.9h-54.9V384H182.8L182.8,384z M157.4,187c18.3,0,29.7-13.1,29.7-29.5
+                                            c-0.3-16.7-11.4-29.5-29.4-29.5c-18,0-29.7,12.8-29.7,29.5c0,16.4,11.4,29.5,29,29.5H157.4L157.4,187z"/>
+                                            <path class="st0" d="M320.6,209c-29.1,0-41.6,16.4-49.6,27.8V213h-55v171h55v-97.4c0-5,0.4-10,1.9-13.5c4-10,13-20.3,28.2-20.3
+                                            c19.9,0,27.9,15.3,27.9,37.7V384h55v-99.9C384,232.8,356.8,209,320.6,209z"/>
+                                        </g>
+                                        <path d="M417.2,64H96.8C79.3,64,64,76.6,64,93.9v321.1c0,17.4,15.3,32.9,32.8,32.9h320.3c17.6,0,30.8-15.6,30.8-32.9V93.9
+                                        C448,76.6,434.7,64,417.2,64z M414,416c-1.1,0-313.1,0-314.9,0s-3.1-1.4-3.1-3.1S96,99.1,96,98s1-2,2-2s315,0,316,0s2,1,2,2
+                                        c0,23.3,0,314.9,0,316C416,414.9,415.1,416,414,416z"/>
+                                    </g>
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li class="section-intro__button">
+                            <a class="section-intro__button-link" href="cv-robert-gulewicz.pdf">
+
+                                <svg class="section-intro__icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 910 910" xml:space="preserve">
+                                    <g>
+                                            <path d="M122.483,50v810.812c0,27.613,22.386,50,50,50h383.655V758.703H223.57c-8.284,0-15-6.717-15-15c0-8.285,6.716-15,15-15
+                                                h333.404c4.744-28.377,29.462-50.076,59.164-50.076h172.183V50c0-27.614-22.386-50-50-50H172.483
+                                                C144.868,0,122.483,22.386,122.483,50z M514.657,94.062l42.478,151.899c9.694,34.166,16.621,63.715,26.777,98.342h1.848
+                                                c10.156-34.627,17.082-64.176,26.316-98.342l42.016-151.899h54.941l-93.725,301.952h-63.253L457.868,94.062H514.657z
+                                                 M358.609,88.522c36.475,0,66.947,18.006,85.877,38.321l-30.011,33.243c-15.236-15.236-32.319-24.932-55.404-24.932
+                                                c-49.864,0-84.953,41.553-84.953,109.423c0,68.794,32.319,110.347,83.106,110.347c26.777,0,46.17-11.081,63.253-30.011
+                                                l30.01,32.781c-24.47,28.164-56.327,43.862-94.187,43.862c-77.104,0-137.125-55.404-137.125-155.593
+                                                C219.176,147.158,281.043,88.522,358.609,88.522z M223.57,471.627h463.664c8.284,0,15,6.717,15,15s-6.716,15-15,15H223.57
+                                                c-8.284,0-15-6.717-15-15S215.285,471.627,223.57,471.627z M223.57,604.709h463.664c8.284,0,15,6.717,15,15
+                                                c0,8.285-6.716,15-15,15H223.57c-8.284,0-15-6.715-15-15C208.57,611.426,215.285,604.709,223.57,604.709z"/>
+                                            <path d="M783.624,708.627H616.139c-16.569,0-30,13.432-30,30v167.508v4.678l202.19-202.186H783.624L783.624,708.627z"/>
+                                        </g>
+                                </svg>
+
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <a class="page__anchor" name="about" id="anchor-about"></a>
+
+            <!-- SECTION: ABOUT -->
+            <section class="page__section section section--about" id="section-about">
+                <div class="page__content-container section__inner-container">
+                    <h2 class="section__title">About me</h2>
+                    <ul>
+                        <li>primarily interested in <strong>web app development</strong> and <strong>all things JavaScript</strong></li>
+                        <li>currently seeking an <strong>entry-level position/internship</strong></li>
+                        <li>plans to work towards a full-stack developer</li>
+                        <li>some freelance experience with web development for NGOs</li>
+                        <li>based in Tricity area, Poland</li>
+                        <li><strong>willing to relocate</strong> as necessary</li>
+                        <li>7+ years of experience as EN/PL translator, so English is a non-issue</li>
+                        <li>keen eye for detail</li>
+                        <li>always happy to go the extra mile</li>
+                    </ul>
+                </div>
+            </section>
+
+            <a class="page__anchor" name="skills" id="anchor-skills"></a>
+
+            <!-- SECTION: SKILLS -->
+            <section class="page__section section section--skills" id="section-skills">
+                <div class="page__content-container section__inner-container">
+                    <h2 class="section__title">Skills</h2>
+
+                    <ul>
+                        <li><strong>JavaScript</strong> (including <strong>ES6</strong> and beyond),</li>
+                        <li><strong>React</strong> and some of the complimentary tools & libraries,</li>
+                        <li><strong>Redux,</strong></li>
+                        <li>Document Object Model API,</li>
+                        <li>HTML, CSS, and CSS preprocessing (Saas),</li>
+                        <li>build process (webpack),</li>
+                        <li>npm environment,</li>
+                        <li>PHP,</li>
+                        <li>basic SQL.</li>
+                    </ul>
+                    
+                    <p>I understand and can leverage:<p>
+                        <ul>
+                            <li>unit testing (Jest),</li>
+                            <li>basic functional programming concepts,</li>
+                            <li>asynchronicity,</li>
+                            <li>communication with REST services,</li>
+                            <li>unidirectional data flow,</li>
+                            <li>clean code principles,</li>
+                            <li>popular design patterns.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <a class="page__anchor" name="projects" id="anchor-projects"></a>
+
+            <!-- SECTION: PROJECTS -->
+            <section class="page__section section section--projects projects" id="section-projects">
+                <div class="page__content-container section__inner-container">
+                    <h2 class="section__title">Projects</h2>
+                    <article class="project">
+                        
+                        <header class="project__header">
+                            <div class="project__name project__name--wip">
+                                <h3 class="project__heading">Aeggon's Farm</h3>
+                                <p class="project__subheading">HTML5 platformer game</p>
+                            </div>
+
+                            <ul class="project__technologies">
+                                <li class="project__technologies-item">JavaScript (ES6+)</li>
+                                <li class="project__technologies-item">Canvas API</li>
+                                <li class="project__technologies-item">webpack</li>
+                            </ul>
+                        </header>
+                        <img class="project__image" src="img/aeggonsfarm.png">
+                        <div class="project__details">
+                            <div class="project__links">
+                                    <a class="project__link" href="http://gulewi.cz/projects/aeggons-farm">
+                                        <span class="project__link-icon-container">
+                                            <svg class="project__link-icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="30 30 455 455" xml:space="preserve">
+                                                <g>
+                                                    <path d="M135.123,204.568c-10.688,0-19.343,8.717-19.343,19.441c0,10.727,8.655,19.447,19.343,19.447
+                                                        c10.641,0,19.297-8.721,19.297-19.447C154.42,213.285,145.764,204.568,135.123,204.568z"/>
+                                                    <path d="M466.279,248.866c-21.157-88.471-43.631-135.489-88.454-148.83C368.06,97.135,359.748,96,352.076,96
+                                                        c-27.598,0-46.938,14.683-96.08,14.683c-49.174,0-68.502-14.681-96.062-14.683c-7.665,0-15.963,1.135-25.721,4.036
+                                                        c-44.869,13.341-67.342,60.359-88.461,148.83c-21.181,88.473-17.334,152.363,7.679,164.289C57.502,415.1,61.662,416,65.885,416
+                                                        c21.694,0,45.139-23.838,67.659-52.047C159.198,331.848,165.658,331,243.822,331h24.343c78.147,0,84.628,0.846,110.282,32.953
+                                                        c22.526,28.207,45.97,52.004,67.665,52.004c4.226,0,8.384-0.879,12.457-2.823C483.574,401.208,487.421,337.339,466.279,248.866z
+                                                            M135.234,263.633C113.594,263.633,96,245.875,96,224.01c0-21.84,17.594-39.643,39.234-39.643
+                                                        c21.655,0,39.249,17.803,39.249,39.643C174.483,245.875,156.89,263.633,135.234,263.633z M308.076,244.14
+                                                        c-11.058,0-20.076-9.019-20.076-20.107c0-11.09,9.019-20.104,20.076-20.104c11.131,0,20.148,9.014,20.148,20.104
+                                                        C328.225,235.121,319.207,244.14,308.076,244.14z M351.988,288c-11.058,0-20.053-8.951-20.053-20.016
+                                                        c0-11.157,8.995-20.106,20.053-20.106c11.146,0,20.148,8.949,20.148,20.106C372.137,279.049,363.134,288,351.988,288z
+                                                            M351.988,200.19c-11.058,0-20.053-8.993-20.053-20.083c0-11.094,8.995-20.107,20.053-20.107c11.146,0,20.148,9.014,20.148,20.107
+                                                        C372.137,191.197,363.134,200.19,351.988,200.19z M395.947,244.14c-11.105,0-20.101-9.019-20.101-20.107
+                                                        c0-11.09,8.995-20.104,20.101-20.104c11.059,0,20.053,9.014,20.053,20.104C416,235.121,407.006,244.14,395.947,244.14z"/>
+                                                </g>
+                                            </svg>
+                                        </span>
+                                        <span class="project__link-label">Play</span>
+                                    </a>
+                                    <a class="project__link" href="https://github.com/robertnayael/aeggons-farm">
+                                        <span class="project__link-icon-container">
+                                            <svg class="project__link-icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="30 30 455 455" xml:space="preserve">
+                                                <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9c1.4,0.3,2.6,0.4,3.8,0.4c8.3,0,11.5-6.1,11.5-11.4
+                                                c0-5.5-0.2-19.9-0.3-39.1c-8.4,1.9-15.9,2.7-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5c-10.2-26.5-24.9-33.6-24.9-33.6
+                                                c-19.5-13.7-0.1-14.1,1.4-14.1c0.1,0,0.1,0,0.1,0c22.5,2,34.3,23.8,34.3,23.8c11.2,19.6,26.2,25.1,39.6,25.1c10.5,0,20-3.4,25.6-6
+                                                c2-14.8,7.8-24.9,14.2-30.7c-49.7-5.8-102-25.5-102-113.5c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,1.6-0.5,5-0.5
+                                                c8.1,0,26.4,3.1,56.6,24.1c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7c30.2-21,48.5-24.1,56.6-24.1c3.4,0,5,0.5,5,0.5
+                                                c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3c8,7.1,15.2,21.1,15.2,42.5
+                                                c0,30.7-0.3,55.5-0.3,63c0,5.4,3.1,11.5,11.4,11.5c1.2,0,2.6-0.1,4-0.4C415.9,449.2,480,363.1,480,261.7C480,134.9,379.7,32,256,32z"/>
+                                            </svg>
+                                        </span>
+                                        <span class="project__link-label">Source</span>
+                                    </a>
+                            </div>
+
+                            <div class="project__description">
+                                <p class="project__copy">
+                                    Made with a custom-built engine. The irregular shapes of objects make up for the simple, tile-based map. I avoided hard-coding of data, and worked to optimize gameplay performance (as far as the canvas API permits).
+                                </p>
+                                <ul class="project__highlights">
+                                    <li class="project__highlights-item">100% custom engine (no external libs)</li>
+                                    <li class="project__highlights-item">100% custom graphics</li>
+                                    <li class="project__highlights-item">clear separation of data and logic</li>
+                                    <li class="project__highlights-item">object-oriented design with FP elements</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </article>
+
+                    <article class="project">
+
+                        <header class="project__header">
+                            <div class="project__name">
+                                <h3 class="project__heading">Word Search Generator</h3>
+                                <p class="project__subheading">App for generating word search printables</p>
+                            </div>
+                            <ul class="project__technologies">
+                                    <li class="project__technologies-item">React</li>
+                                    <li class="project__technologies-item">Redux</li>
+                                    <li class="project__technologies-item">redux-thunk</li>
+                                    <li class="project__technologies-item">antd UI library</li>
+                                    <li class="project__technologies-item">Web Workers API</li>
+                                </ul>
+                        </header>
+                        <img class="project__image" src="img/wordsearch.png">
+                        <div class="project__details">
+                            <div class="project__links">
+                                <a class="project__link" href="http://gulewi.cz/projects/word-search-generator">
+                                    <span class="project__link-icon-container">
+                                        <svg class="project__link-icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="30 30 455 455" xml:space="preserve">
+                                            <path d="M448,273.001c-21.27,0-39.296,13.999-45.596,32.999h-38.857l-28.361-85.417c-2.176-6.553-8.303-10.956-15.183-10.956
+                                            c-0.112,0-0.224,0-0.335,0.004c-7.016,0.145-13.117,4.844-15.049,11.588l-44.484,155.262L207.782,62.373
+                                            C206.535,54.893,200.333,48,192,48s-13.693,5.776-15.525,13.135L115.496,306H16v31.999h112c7.348,0,13.75-5.003,15.525-12.134
+                                            l45.368-182.177l51.324,307.94c1.229,7.377,7.397,11.92,14.864,12.344C255.389,463.99,255.695,464,256,464
+                                            c7.097,0,13.406-3.701,15.381-10.594l49.744-173.617l15.689,47.252c2.173,6.543,8.292,10.958,15.186,10.958h51.108
+                                            C409.973,355.999,427.477,369,448,369c26.511,0,48-22.492,48-49C496,293.491,474.511,273.001,448,273.001z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="project__link-label">Live</span>
+                                </a>
+                                <a class="project__link" href="https://github.com/robertnayael/word-search-generator">
+                                    <span class="project__link-icon-container">
+                                        <svg class="project__link-icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="30 30 455 455" xml:space="preserve">
+                                            <path d="M256,32C132.3,32,32,134.9,32,261.7c0,101.5,64.2,187.5,153.2,217.9c1.4,0.3,2.6,0.4,3.8,0.4c8.3,0,11.5-6.1,11.5-11.4
+                                            c0-5.5-0.2-19.9-0.3-39.1c-8.4,1.9-15.9,2.7-22.6,2.7c-43.1,0-52.9-33.5-52.9-33.5c-10.2-26.5-24.9-33.6-24.9-33.6
+                                            c-19.5-13.7-0.1-14.1,1.4-14.1c0.1,0,0.1,0,0.1,0c22.5,2,34.3,23.8,34.3,23.8c11.2,19.6,26.2,25.1,39.6,25.1c10.5,0,20-3.4,25.6-6
+                                            c2-14.8,7.8-24.9,14.2-30.7c-49.7-5.8-102-25.5-102-113.5c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,1.6-0.5,5-0.5
+                                            c8.1,0,26.4,3.1,56.6,24.1c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7c30.2-21,48.5-24.1,56.6-24.1c3.4,0,5,0.5,5,0.5
+                                            c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3c8,7.1,15.2,21.1,15.2,42.5
+                                            c0,30.7-0.3,55.5-0.3,63c0,5.4,3.1,11.5,11.4,11.5c1.2,0,2.6-0.1,4-0.4C415.9,449.2,480,363.1,480,261.7C480,134.9,379.7,32,256,32z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="project__link-label">Source</span>
+                                </a>
+                            </div>
+                            <div class="project__description">
+                                <p class="project__copy">
+                                    Create your own word search puzzles that are ready to print. Great for teachers who need additional resources for their students, especially in language classes.
+                                </p>
+                                <ul class="project__highlights">
+                                    <li class="project__highlights-item">unit tests covering all non-UI logic</li>
+                                    <li class="project__highlights-item">custom puzzle generation algorithm</li>
+                                    <li class="project__highlights-item">multi-language support</li>
+                                    <li class="project__highlights-item">the laborious puzzle generation process runs in a background thread to avoid blocking the UI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <a class="page__anchor" name="contact-me" id="anchor-contact-me"></a>
+
+            <!-- SECTION: CONTACT ME -->
+            <section class="page__section section section--contact-me contact-me" id="section-contact-me">
+                <div class="page__content-container section__inner-container">
+                    <h2 class="section__title">Contact me</h2>
+                    <ul class="contact-me__channels">
+                        <li class="contact-me__channel">
+                            <a class="contact-me__link" href="mailto:robert@gulewi.cz">
+                                <svg class="contact-me__link-icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="30 30 455 455" xml:space="preserve">
+                                    <g>
+                                        <path d="M67,148.7c11,5.8,163.8,89.1,169.5,92.1c5.7,3,11.5,4.4,20.5,4.4c9,0,14.8-1.4,20.5-4.4c5.7-3,158.5-86.3,169.5-92.1
+                                            c4.1-2.1,11-5.9,12.5-10.2c2.6-7.6-0.2-10.5-11.3-10.5H257H65.8c-11.1,0-13.9,3-11.3,10.5C56,142.9,62.9,146.6,67,148.7z"/>
+                                        <path d="M455.7,153.2c-8.2,4.2-81.8,56.6-130.5,88.1l82.2,92.5c2,2,2.9,4.4,1.8,5.6c-1.2,1.1-3.8,0.5-5.9-1.4l-98.6-83.2
+                                            c-14.9,9.6-25.4,16.2-27.2,17.2c-7.7,3.9-13.1,4.4-20.5,4.4c-7.4,0-12.8-0.5-20.5-4.4c-1.9-1-12.3-7.6-27.2-17.2l-98.6,83.2
+                                            c-2,2-4.7,2.6-5.9,1.4c-1.2-1.1-0.3-3.6,1.7-5.6l82.1-92.5c-48.7-31.5-123.1-83.9-131.3-88.1c-8.8-4.5-9.3,0.8-9.3,4.9
+                                            c0,4.1,0,205,0,205c0,9.3,13.7,20.9,23.5,20.9H257h185.5c9.8,0,21.5-11.7,21.5-20.9c0,0,0-201,0-205
+                                            C464,153.9,464.6,148.7,455.7,153.2z"/>
+                                    </g>
+                                </svg>
+                                <span class="contact-me__link-text">robert@gulewi.cz</span>
+                            </a>
+                        </li>
+                        <li class="contact-me__channel">
+                                <a class="contact-me__link" href="tel:+48793230703">
+                                    <svg class="contact-me__link-icon" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                                        <path d="M426.666,330.667c-26.666,0-52.271-4.271-75.729-11.729c-7.469-2.136-16-1.073-21.332,5.333l-46.939,46.928
+                                        c-60.802-30.928-109.864-80-140.802-140.803l46.939-46.927c5.332-5.333,7.462-13.864,5.332-21.333
+                                        c-8.537-24.531-12.802-50.136-12.802-76.803C181.333,73.604,171.734,64,160,64H85.333C73.599,64,64,73.604,64,85.333
+                                        C64,285.864,226.136,448,426.666,448c11.73,0,21.334-9.604,21.334-21.333V352C448,340.271,438.396,330.667,426.666,330.667z"/>
+                                    </svg>
+                                    <span class="contact-me__link-text">+48 793 230 703</span>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
 
     </body>
 </html>
