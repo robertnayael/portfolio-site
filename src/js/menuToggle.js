@@ -1,14 +1,13 @@
-const btn = document.querySelector('.navigation__toggle');
-const menu = document.querySelector('.navigation__menu');
+import { menu, menuBtn } from './elements';
 
 function openMenu() {
     menu.classList.add('is-active'); 
-    btn.setAttribute('aria-expanded', 'true');
+    menuBtn.setAttribute('aria-expanded', 'true');
 }
 
 function closeMenu() {
-    btn.setAttribute('aria-expanded', 'false');
     menu.classList.remove('is-active');
+    menuBtn.setAttribute('aria-expanded', 'false');
 }
 
 function toggleMenu() {
@@ -17,5 +16,5 @@ function toggleMenu() {
         : openMenu();
 }
 
-btn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener('click', toggleMenu);
 menu.addEventListener('click', closeMenu);

@@ -1,13 +1,13 @@
-/* references to DOM elements */
+/* References to DOM elements */
 
-export const sections = {
-    intro: document.querySelector('.section--intro'),
-    about: document.querySelector('.section--about'),
-    skills: document.querySelector('.section--skills'),
-    projects: document.querySelector('.section--projects'),
-    contactMe: document.querySelector('.section--contact-me'),
-};
-
-export const header = document.querySelector('.navigation');
-
+export const header = document.querySelector('.header');
 export const avatarCanvas = document.querySelector('#avatar');
+export const menuBtn = document.querySelector('.navigation__toggle');
+export const menu = document.querySelector('.navigation__menu');
+
+export default {
+    header,
+    avatarCanvas,
+    menuBtn,
+    menu
+};

@@ -1,12 +1,5 @@
 import Avatar from './Avatar';
-import {header, sections, avatarCanvas} from '../elements';
-
-/*----------------------------------------------------------------*/
-
-const getViewportHeight = () => window.innerHeight;
-const getSectionStart = (section) => section.offsetTop - header.scrollHeight;
-const getSectionEnd = (section) => section.offsetTop + section.scrollHeight;
-const getSectionHeight = (section) => parseInt(window.getComputedStyle(section).height, 10);
+import { avatarCanvas } from '../elements';
 
 /*----------------------------------------------------------------*/
 
@@ -15,29 +8,64 @@ const sprites = {
         src: './img/avatar/body.png',
         x: 0,
         y: 0,
-        width: 290,
-        height: 448
+        width: 255,
+        height: 430,
     },
     headtop: {
         src: './img/avatar/headtop.png',
         x: 0,
         y: 0,
-        width: 290,
-        height: 448
+        width: 255,
+        height: 430,
     },
     headfront: {
         src: './img/avatar/headfront.png',
         x: 0,
         y: 0,
-        width: 290,
-        height: 448
+        width: 255,
+        height: 430,
     },
     github: {
         src: './img/avatar/github.png',
         x: 0,
         y: 0,
-        width: 290,
-        height: 448
+        width: 255,
+        height: 430,
+    },
+    about: {
+        src: './img/avatar/about.png',
+        x: 0,
+        y: 0,
+        width: 255,
+        height: 430,
+    },
+    react: {
+        src: './img/avatar/react.png',
+        x: 0,
+        y: 0,
+        width: 255,
+        height: 430,
+    },
+    html: {
+        src: './img/avatar/html.png',
+        x: 0,
+        y: 0,
+        width: 255,
+        height: 430,
+    },
+    js: {
+        src: './img/avatar/js.png',
+        x: 0,
+        y: 0,
+        width: 255,
+        height: 430,
+    },
+    envelope: {
+        src: './img/avatar/envelope.png',
+        x: 0,
+        y: 0,
+        width: 255,
+        height: 430,
     }
 }
 
@@ -45,81 +73,94 @@ const sprites = {
 
 const avatar = new Avatar({
     canvas: avatarCanvas,
-    width: 290,
-    height: 450
+    width: 255,
+    height: 430,
+    bgSprite: sprites.body,
+    fgSprite: sprites.headfront
 });
 
 /*----------------------------------------------------------------*/
 
-/* BODY */
-avatar.addSprite(sprites.body)
-    .position({x: 0, y: 0});
+const intro = {
+    sprite: sprites.headtop,
+    startY: 130,
+    duration: 1500,
+    delay: 1000
+};
 
-/* HEAD TOP: TOP OF PAGE */
-avatar.addSprite(sprites.headtop)
-    .position({x: 0, y: [0, 150]})
-    .progression(
-        () => ({
-            start: 0,
-            end: getSectionHeight(sections.intro) - (getViewportHeight() / 2)
-        })
-    )
-    .visibility(
-        () => ({
-            start: 0,
-            end: getSectionHeight(sections.intro) - (getViewportHeight() / 2)
-        })
-    );
+const about = {
+    sprite: sprites.about,
+    startY: 165,
+    duration: 2000,
+    delay: 1000
+};
 
+const react = {
+    sprite: sprites.react,
+    startY: 135,
+    duration: 3000,
+    delay: 1000
+};
 
-/* GITHUB (APPEAR) */
-avatar.addSprite(sprites.github)
-    .position({x: 0, y: [155, 0]})
-    .progression(
-        () => ({
-            start: getSectionStart(sections.projects) - (getViewportHeight() / 2),
-            end: getSectionStart(sections.projects) - 1
-        })
-    )
-    .visibility(
-        () => ({
-            start: getSectionStart(sections.projects) - (getViewportHeight() / 2),
-            end: getSectionStart(sections.projects) - 1
-        })
-    );
+const html = {
+    sprite: sprites.html,
+    startY: 145,
+    duration: 2000,
+    delay: 2000
+};
 
-/* GITHUB (STAY) */
-avatar.addSprite(sprites.github)
-    .position({x: 0, y: 0})
-    .visibility(
-        () => ({
-            start: getSectionStart(sections.projects),
-            end: getSectionStart(sections.projects) + getViewportHeight() / 4 - 1
-        })
-    );
+const js = {
+    sprite: sprites.js,
+    startY: 155,
+    duration: 2000,
+    delay: 1000
+};
 
-/* GITHUB (DISAPPEAR) */
-avatar.addSprite(sprites.github)
-    .position({x: 0, y: [0, 155]})
-    .progression(
-        () => ({
-            start: getSectionStart(sections.projects) + getViewportHeight() / 4,
-            end: getSectionStart(sections.projects) + getViewportHeight() / 2
-        })
-    )
-    .visibility(
-        () => ({
-            start: getSectionStart(sections.projects) + getViewportHeight() / 4,
-            end: getSectionStart(sections.projects) + getViewportHeight() / 2
-        })
-    );
+const github = {
+    sprite: sprites.github,
+    startY: 135,
+    duration: 2000,
+    delay: 1000
+};
 
-/* HEAD FRONT */
-avatar.addSprite(sprites.headfront)
-    .position({x: 0, y: 0});
+const envelope = {
+    sprite: sprites.envelope,
+    startY: 135,
+    duration: 1000,
+    delay: 1000
+};
+
+/*----------------------------------------------------------------*/
+
+avatar.addView({
+    id: 'intro',
+    animations: [intro],
+    isFirst: true
+});
+
+avatar.addView({
+    id: 'about',
+    animations: [about]
+});
+
+avatar.addView({
+    id: 'skills',
+    animations: [html, js, react]
+});
+
+avatar.addView({
+    id: 'projects',
+    animations: [github]
+});
+
+avatar.addView({
+    id: 'contact-me',
+    animations: [envelope]
+});
 
 /*----------------------------------------------------------------*/
 
 avatar.init();
+avatar.switchView('intro');
 
-/*----------------------------------------------------------------*/
+export default avatar;
