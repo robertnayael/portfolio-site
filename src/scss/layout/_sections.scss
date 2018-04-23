@@ -9,8 +9,11 @@
 }
 
 .section__title {
+
     font-weight: 700;
     font-size: 250%;
+    margin: 2rem 0 3rem 0;
+    line-height: 1;
 
     &--main {
         font-size: 300%;
@@ -19,22 +22,33 @@
 }
 
 .section__subtitle {
+
     font-weight: 300;
     font-size: 140%;
     text-align: center;
 }
 
 .section--intro {
-    background-color: $bg-dark;
-
-
-
+    background-color: #1A4064;
+    @include text-light;
 }
 
 .section--about {
-    background-color: $bg-light;
+    background-color: #F0F8FF;
+    @include text-dark;
+}
+
+.section--skills {
+    background-color: #234B8B;
+    @include text-light;
 }
 
 .section--projects {
-    background-color: $bg-light;
+    background-color: #FFF;
+    @include text-dark;
+}
+
+.section--contact-me {
+    background-color: #14283D;
+    @include text-light;
 }

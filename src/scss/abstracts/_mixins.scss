@@ -33,19 +33,29 @@
 }
 
 @mixin screen-small() {
-  @include mq($until: tablet) {
+  @include mq($until: desktop) {
     @content;
   }
 }
 
 @mixin screen-small-landscape() {
-  @include mq($until: tablet, $and: '(orientation: landscape)') {
+  @include mq($until: desktop, $and: '(orientation: landscape)') {
     @content;
   }
 }
 
 @mixin screen-large() {
-  @include mq($from: tablet) {
+  @include mq($from: desktop) {
     @content;
   }
+}
+
+@mixin text-light {
+  color: $text-color-light;
+  font-weight: 300;
+}
+
+@mixin text-dark {
+  color: $text-color;
+  font-weight: 400;
 }

@@ -2,12 +2,21 @@
 // This file contains all styles related to site navigation.
 // -----------------------------------------------------------------------------
 
+$menu-toggle-size: 40px;
+
 .navigation {
 
+    font-size: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 100%;
 
 
     @include screen-large {
@@ -16,22 +25,23 @@
         margin-right: auto;
         width: 100%;
         display: flex;
-        justify-content: flex-end;
     }
 
     &__toggle {
         display: none;
 
-        width: 30px;
-        height: 30px;
-        padding: 0;
-        border: none;
-        background-color: blue;
-        z-index: 100;
-        margin-right: 20px;
+
+        //margin-right: 20px;
 
         @include screen-small {
             display: block;
+            width: $menu-toggle-size;
+            height: $menu-toggle-size;
+            margin-right: calc((#{$header-height} - #{$menu-toggle-size}) / 2);
+            padding: 0;
+            border: none;
+            background-color: blue;
+            z-index: 2;
         }
     }
 
@@ -44,24 +54,23 @@
 
         @include screen-small {
             opacity: 0;
+            transform: translateX(-100%);
             pointer-events: none;
 
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             padding-top: $header-height;
             flex-direction: column;
-            justify-content: space-evenly;
-            transition: opacity 0.3s linear;
+            transition: all 0.3s ease-in;
             background-color: green;
-            border: 1px solid yellow;
             
             &.is-active {
                 pointer-events: auto;
-                opacity: 1;
-
+                opacity: 0.95;
+                transform: none;
             }
         }
 
@@ -70,14 +79,36 @@
     }
 
 
-    &__link {
+    &__item {
 
         margin: 0 20px;
 
         @include screen-small {
-            text-align: center;
-            display: block;
+            display: flex;
+            margin: 0;
+            width: 100%;
+            height: 100%;
         }
+    }
+
+    &__link {
+        @include screen-small {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        &.is-active {
+            text-decoration: underline;
+        }
+    }
+
+    &__link-text {
+        @include screen-small {
+            display: inline-block;
+        }
+        
     }
 
 

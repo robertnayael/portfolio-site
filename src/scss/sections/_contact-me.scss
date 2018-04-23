@@ -1,0 +1,38 @@
+.contact-me {
+
+}
+
+.contact-me__channels {
+    margin-top: 5rem;
+    padding: 0;
+}
+
+.contact-me__channel {
+    display: flex;
+
+    &:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+}
+
+.contact-me__link {
+    display: flex;
+    align-items: center;
+}
+
+.contact-me__link-text {
+    font-size: 120%;
+    display: block;
+    margin-left: 1rem;
+}
+
+.contact-me__link-icon {
+    width: 3rem;
+    height: 3rem;
+    fill: $text-color-light;
+    transition: all 0.2s ease;
+
+    :hover > & {
+        fill: $contrast-color;
+    }
+}

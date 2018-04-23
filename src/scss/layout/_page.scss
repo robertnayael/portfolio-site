@@ -25,12 +25,11 @@ $section-top-padding: 200px;
     min-height: calc(100vh - #{$header-height});
 }
 
-// Make sure the anchor is: at the very top of its section
-// AND offset up to accommodate for the header.
+// Move the anchor up by the height of the header.
 .page__anchor {
-    position: relative;
-    top: -$header-height;
     display: block;
+    position: relative;
+    top: calc(-#{$header-height} + 0px); 
 
     // position: absolute;
     // top: 0;
@@ -44,7 +43,7 @@ $section-top-padding: 200px;
     padding: 20px;
 
     @include screen-large() {
-        padding-left: calc(310px + 180px); // make room for the avatar on the side
+        padding-left: calc(310px + 100px); // make room for the avatar on the side
     }
 }
 
@@ -60,13 +59,15 @@ $section-top-padding: 200px;
 
     position: fixed;
 
+
     @include screen-large() {
 
         height: calc(100vh - #{$header-height});
         width: 310px;
+        max-width: 20vw;
+        margin-left: 20px;
 
         display: flex;
-        flex-direction: row-reverse;
         align-items: center;
     }
 
@@ -81,6 +82,7 @@ $section-top-padding: 200px;
     
     @include screen-large() {
         max-height: calc(100vh - #{$header-height});
+        max-width: 20vw;;
     }
 
     @include screen-small() {

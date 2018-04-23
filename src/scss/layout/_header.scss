@@ -4,40 +4,33 @@
 
 .header {
 
-    background-color: $header-bg;
-    position: fixed;
     width: 100%;
     height: $header-height;
-    transition: all 0.2s linear;
-    font-size: 90%;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease-in;
+    background-color: $header-bg;
 
-
-
-
-    @include screen-small {
-
-        //background-color: $header-bg;
-
+    &--intro {
+        background-color: #1A4064;
     }
 
-    @include screen-large {
-
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        //background-color: $header-bg;
-        //padding: 0.5em 1em;
-
-        &--at-top {
-            //background-color: $header-bg;
-            //padding: 0.5em 1em;
-        }
+    &--about {
+        background-color: #F0F8FF;
+        @include links-dark;
     }
 
+    &--skills {
+        background-color: #234B8B;
+    }
 
+    &--projects {
+        background-color: #FFF;
+        @include links-dark;
+    }
+
+    &--contact-me {
+        background-color: #14283D;
+    }
 }

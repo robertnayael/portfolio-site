@@ -2,10 +2,15 @@
  * Basic typography style for copy text
  */
 body {
-  -webkit-font-smoothing: antialiased;
   color: $text-color-light;
   font: normal 100% / 1.8 $text-font-stack;
-  font-weight: 300;
+  line-height: 2;
+  letter-spacing: -.25px;
+  font-weight: 400;
+
+  @include screen-large {
+    font-size: calc(100% + .15vw);
+  }
 }
 
 strong {

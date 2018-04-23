@@ -3,24 +3,16 @@
 // -----------------------------------------------------------------------------
 
 
-
-
-
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', sans-serif !default;
-
-/// Code (monospace) font family
-/// @type List
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
-
-
+//$text-font-stack: 'Open Sans', sans-serif !default;
+$text-font-stack: 'Roboto', sans-serif !default;
 
 
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$text-color: #333 !default;
 
 /// Copy text color (ligh variant for dark backgrounds)
 /// @type Color
@@ -28,19 +20,25 @@ $text-color-light: rgb(255, 255, 255) !default;
 
 /// Main contrast color
 /// @type Color
-$contrast-color: #FF6700 !default;
+//$contrast-color: #E3B505 !default;
+//$contrast-color: #DB504A !default;
+//$contrast-color: #76B041 !default;
+$contrast-color: #DB5461 !default;
+//$contrast-color: #CB3727 !default;
+//$contrast-color: #8AEA92 !default;
 
 /// Background color (light)
 /// @type Color
-$bg-light: #363655 !default;
+$bg-light: #3066BE !default;
 
 /// Background color (dark)
 /// @type Color
-$bg-dark: #262626 !default;
+//$bg-dark: #262626 !default;
+$bg-dark: #1A4064 !default;
 
 /// Header background color
 /// @type Color
-$header-bg: #262626;
+$header-bg: $bg-dark;
 
 
 
@@ -55,4 +53,5 @@ $content-max-width: 1180px !default;
 /// @type String
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
-$base-url: '/' !default;
+//$base-url: '/portfolio-site/dist/' !default;
+$base-url: '../' !default;

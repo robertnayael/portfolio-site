@@ -1,0 +1,45 @@
+.section-intro {
+
+}
+
+.section-intro__buttons {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    //border: 1px dashed gray;
+}
+
+.section-intro__button {
+
+    display: block;
+    margin: 0 1rem;
+
+    //border: 1px dashed green;
+
+}
+
+.section-intro__button-link {
+
+    display: block;
+    width: 2rem;
+    height: 2rem;
+
+    //border: 1px dashed yellow;
+
+    &--github {
+        
+    }
+}
+
+.section-intro__icon {
+
+    width: 2rem;
+    height: 2rem;
+    fill: $text-color-light;
+    transition: all 0.2s ease;
+
+    :hover > & {
+        fill: $contrast-color;
+    }
+}
