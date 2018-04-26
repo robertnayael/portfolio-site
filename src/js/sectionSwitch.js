@@ -5,7 +5,6 @@ import sections from './sections';
 import avatar from './avatar';
 
 const baseURL = '';
-const snapToNearbySections = false;
 
 let isScrolling = false;    // Indicates wheter smooth scrolling is taking place
 let prevVisualSection;      // Section the occupies the very top of the screen (even if that's just 1 px)
